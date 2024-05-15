@@ -23,7 +23,7 @@ function update(email, amount){
         .collection('users')
         .findOneAndUpdate(
             {email: email},
-            {$inc: {balance: amount}},
+            {$inc: {balance: JSON.parse(Number(amount))}},
             {returnOriginal: false},
             function(err, documents){
                 err ? reject(err) : resolve(documents);

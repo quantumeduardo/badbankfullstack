@@ -25,7 +25,7 @@ firebase.initializeApp(firebaseConfig);
     console.log(email,amount);
     firebase.auth().currentUser.getIdToken()
       .then(idToken => {
-        fetch(`/account/update/${email}/${balance}`,{
+        fetch(`/account/update/${email}/${amount}`,{
           method: 'GET',
           headers: {
             'Authorization' : idToken
