@@ -29,19 +29,7 @@ function Balance(){
 
 }
 
-function BalanceMsg(props){
-  return(<>
-    <h5>Success</h5>
-    <button type="submit" 
-      className="btn btn-light" 
-      onClick={() => {
-        props.setShow(true);
-        props.setStatus('');
-      }}>
-        Check balance again
-    </button>
-  </>);
-}
+
 
 function BalanceForm(props){
   const [email, setEmail]   = React.useState('');
@@ -79,5 +67,18 @@ function BalanceForm(props){
         Check Balance
     </button>
 
+  </>);
+}
+function BalanceMsg(props){
+  return(<>
+    <h5>Success</h5>
+    <button type="submit" 
+      className="btn btn-light" 
+      onClick={() => {
+        props.setShow(true);
+        props.setStatus('');
+      }}>
+        Check balance again
+    </button>
   </>);
 }
